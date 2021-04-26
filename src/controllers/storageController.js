@@ -18,10 +18,10 @@ const onlineStorage = async(req, res, next) => {
     /*const googleDrive = new GoogleDrive();
     const body = googleDrive.main();*/
 
-    body.then((results) => {
+    /*body.then((results) => {
       const result = Object.assign({}, results);
       firestore.collection('online-storage').doc().set(result);
-    });
+    });*/
   } catch(error) {
     res.status(400).send(error.message);
   }
