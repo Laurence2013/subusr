@@ -11,40 +11,52 @@ class GoogleDrive {
     const getListing = $('.CzTxdd').map((index, element) => {
       if(index >= 7){ return; }
 
-      const listing = [];
+      const desc = [];
       const audience = '';
       const info = '';
       const user_plan = function(element){
         const user_type = {'user_type': ''};
         const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} });
-
+ 
         return {'user_type': user_type,'storage': storage[0]};
       }
       const plan_name = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} });
       const monthly = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} });
       const yearly_price = $(element).find('.VfPpkd-vQzf8d').text().trim();
 
-      if(yearly_price.length >= 20){
-        const yrly_price_fix = yearly_price.substring(13, 26).replace('£','').split(' ')[0];
-        listing.push({'yearly_price': yrly_price_fix});
-      }
-      listing.push({'user_plan': user_plan(element)});
+      const yrly_price = function(yearly_price){
+        if(yearly_price.length >= 20){
+          const yrly_price_fix = yearly_price.substring(13, 26).replace('£','').split(' ')[0];
 
-      if(plan_name.length != 0){
-        listing.push({'plan_name': plan_name[0].type});
-      }else{
-        listing.push({'plan_name': ''});
+          return {'yearly_price': yrly_price_fix};
+        } else {
+          return {'yearly_price': ''}
+        }
       }
-      try {
-        const price = monthly[0].price.replace('£','').split(' ')[0];
-        listing.push({'monthly': price});
-      }catch(error){
-        listing.push({'monthly': ''});
+      const plan = function(plan_name){
+        if(plan_name.length != 0){
+          return {'plan_name': plan_name[0].type};
+        }else{
+          return {'plan_name': ''};
+        }
       }
-      listing.push({'audience': audience});
-      listing.push({'info': info});
-
-      return {'name': document_name, 'desc': listing};
+      const mnth_price = function(monthly){
+        try {
+          const price = monthly[0].price.replace('£','').split(' ')[0];
+          return {'monthly': price};
+        }catch(error){
+          return {'monthly': ''};
+        }
+      }
+      desc.push({
+        'audience': audience, 
+        'plan_name': plan(plan_name).plan_name, 
+        'monthly': mnth_price(monthly).monthly, 
+        'info': info, 
+        'user_plan': user_plan(element), 
+        'yearly_price': yrly_price(yearly_price).yearly_price
+      });
+      return {'name': document_name, 'desc': desc[0]};
     }).get()
 
     for(let i = 0; i < getListing.length; i++){
@@ -52,23 +64,22 @@ class GoogleDrive {
         const span = $(element).map((index, element) => {
           return ($(element).find('ul > li').map((index, element) => {
             const span = $(element).find('span:nth-child(2)').text().trim();
-
+               
             return {'detail': span};
-          }));
-        });
+          }))
+        })
         return span[0];
-        });
-        const details = [];
+      });
+      const details = [];
 
-        for(let j = 0; j < detail_info[i].length; j++){
-          const detail = 'detail_' + [j].toString();
-
-          details.push({[detail]: detail_info[i][j].detail});
-        }
-        getListing[i].desc.push({'details': details});
+      for(let j = 0; j < detail_info[i].length; j++){
+        const detail = 'detail_' + [j].toString();
+        
+        details.push({[detail]: detail_info[i][j].detail});
+      }
+      getListing[i].desc.details = details;
     }
     return getListing;
-
   }
   async main(){
     const browser = await puppeteer.launch({headless: true})
