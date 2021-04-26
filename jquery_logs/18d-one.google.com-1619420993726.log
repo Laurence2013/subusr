@@ -1,0 +1,80 @@
+function main(){
+    const document_name = 'GoogleDrive';
+
+    const getListing = $('.CzTxdd').map((index, element) => {
+        if(index >= 7){ return; }
+
+        const desc = [];
+        const audience = '';
+        const info = '';
+        const user_plan = function(element){
+            const user_type = {'user_type': ''};
+            const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} });
+   
+            return {'user_type': user_type,'storage': storage[0]};
+        }
+        const plan_name = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} });
+        const monthly = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} });
+        const yearly_price = $(element).find('.VfPpkd-vQzf8d').text().trim();
+
+        const yrly_price = function(yearly_price){
+            if(yearly_price.length >= 20) {
+                const yrly_price_fix = yearly_price.substring(13, 26).replace('£','').split(' ')[0];
+                return {'yearly_price': yrly_price_fix};
+            }else{
+                return {'yearly_price': ''}
+            }
+        }
+        const plan = function(plan_name){
+            if(plan_name.length != 0){
+                return {'plan_name': plan_name[0].type};
+            }else{
+                return {'plan_name': ''};
+            }
+        }
+        const mnth_price = function(monthly){
+            try {
+                const price = monthly[0].price.replace('£','').split(' ')[0];
+                return {'monthly': price};
+            }catch(error){
+                return {'monthly': ''};
+            }
+        }
+        desc.push({
+            'audience': audience, 
+            'plan_name': plan(plan_name).plan_name, 
+            'monthly': mnth_price(monthly).monthly, 
+            'info': info, 
+            'user_plan': user_plan(element), 
+            'yearly_price': yrly_price(yearly_price).yearly_price
+        });
+        return {'name': document_name, 'desc': desc[0]};
+    }).get()
+
+    for(let i = 0; i < getListing.length; i++){
+        const detail_info = $('.hxvKGd').map((index, element) => {
+            const span = $(element).map((index, element) => {
+              return ($(element).find('ul > li').map((index, element) => {
+                const span = $(element).find('span:nth-child(2)').text().trim();
+               
+                return {'detail': span};
+              }))
+            })
+            return span[0];
+        });
+        const details = [];
+
+        for(let j = 0; j < detail_info[i].length; j++){
+            const detail = 'detail_' + [j].toString();
+
+            details.push({[detail]: detail_info[i][j].detail});
+        }
+        //console.log(getListing[i].desc.push());
+        getListing[i].desc.details = details;
+    }
+    console.log(getListing);
+}
+main()
+
+VM6620:75 (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]0: desc: audience: ""details: Array(1)0: {detail_0: "15 GB storage"}length: 1__proto__: Array(0)info: ""monthly: ""plan_name: "Free"user_plan: {user_type: {…}, storage: {…}}yearly_price: ""__proto__: Objectname: "GoogleDrive"__proto__: Object1: desc: audience: ""details: Array(4)0: {detail_0: "100 GB storage"}1: {detail_1: "Access to Google experts"}2: {detail_2: "Option to add your family"}3: {detail_3: "Extra member benefits"}length: 4__proto__: Array(0)info: ""monthly: "1.59"plan_name: ""user_plan: {user_type: {…}, storage: {…}}yearly_price: "15.99"__proto__: Objectname: "GoogleDrive"__proto__: Object2: {name: "GoogleDrive", desc: {…}}3: {name: "GoogleDrive", desc: {…}}4: {name: "GoogleDrive", desc: {…}}5: {name: "GoogleDrive", desc: {…}}6: {name: "GoogleDrive", desc: {…}}length: 7__proto__: Array(0)
+undefined

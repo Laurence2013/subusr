@@ -1,7 +1,6 @@
 'use-strict'
 
 const DropBox = require('../scrapers/online-storage/dropbox');
-const WebHostingRating = require('../scrapers/online-storage/webhostingrating');
 const NordLocker = require('../scrapers/online-storage/nordlocker');
 const GoogleDrive = require('../scrapers/online-storage/google-drive');
 
@@ -13,14 +12,11 @@ const onlineStorage = async(req, res, next) => {
     /*const dropbox = new DropBox();
     const body = dropbox.main();*/
 
-    /*const hostingRating = new WebHostingRating();
-    const body = hostingRating.main();*/
+    const nordlocker = new NordLocker();
+    const body = nordlocker.main();
 
-    /*const nordlocker = new NordLocker();
-    const body = nordlocker.main();*/
-
-    const googleDrive = new GoogleDrive();
-    const body = googleDrive.main();
+    /*const googleDrive = new GoogleDrive();
+    const body = googleDrive.main();*/
 
     body.then((results) => {
       const result = Object.assign({}, results);

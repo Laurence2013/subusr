@@ -8,19 +8,46 @@ class NordLocker {
     const html = await page.content();
     const $ = cheerio.load(html);
 
-    const listing = await $('.Pricing > .h-full').map((index, element) => {  
-      const storage_space = $(element).find('.mb-6').text();
-      const monthly_price = $(element).find('.mt-auto > .mb-3 > .flex').text();
-      const price_info = $(element).find('.mt-auto').map((index, element) => {
-        const info = $(element).find('.mb-2 > div > span').text();   	
-        const finalInfo = info.replace(/([ACDEFH-Z])/g, ", $1");
+    const getListing = $('.Pricing > .h-full').map((index, element) => {
+      const desc = [];
+      const audience = '';
+      const info = $(element).find('.px-3').text().trim();
+      const plan_name = '';
+      const yearly_plan = '';
+      const user_plan = function(elem){
+        const user_type = {'user_type': ''}
+        const storage = $(elem).find('.mb-6').map((index, element) => {
+            return {'storage': $(element).find('.text-lead').text().trim()};
+        })
+        return {'user_type': user_type, 'storage': storage[0]};
+      }
+      const monthly = $(element).find('.mt-auto > .mb-3 > .flex').text().replace('/','').replace('mo','');
+      const details_info = $(element).find('.mt-auto').map((index, element) => {
+        const info = $(element).find('.mb-2 > .flex > .text-small').map((index, element) => {
+          const detail = 'detail_' + index.toString();
+          const detail_info = $(element).text().trim();
 
-        return {'info': finalInfo}
-      })
-      return {'name': document_name, 'storage': storage_space, 'monthly': monthly_price, 'price': price_info[0].info}
-    }).get();
+          return {[detail]: detail_info}
+        });
+        return info;
+      });
+      const details = [];
+      for(let i = 0; i < details_info[0].length; i++){
+        details.push(details_info[0][i]);
+      }
+      desc.push({
+        'audience': audience,
+        'user_plan': user_plan(element),
+        'monthly': '$' + monthly,
+        'info': info,
+        'plan_name': plan_name,
+        'yearly_plan': yearly_plan,
+        'details': details
+      });
+      return {'name': document_name, 'desc': desc[0]};
+    }).get()
 
-    return listing;
+    return getListing;
   }
   async main(){
     const browser = await puppeteer.launch({headless: true});
