@@ -1,0 +1,62 @@
+$('.CzTxdd').map((index, element) => {
+    const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} })
+    const type = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} })
+    const price_type = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} })
+    const yrly_price = $(element).find('.VfPpkd-vQzf8d').text().trim()
+        
+    /*if(yrly_price.length >= 20) {
+        const yrly_price_fix = yrly_price.substring(13, 26)
+        console.log('YEARLY PRICE: ' + yrly_price_fix)
+    }
+
+    console.log('STORAGE: ' + storage[0].storage)
+
+    if(type.length != 0){
+        console.log('TYPE: ' + type[0].type)
+    }
+
+    try{
+        console.log('PRICE: ' + price_type[0].price)
+    }catch(error){
+        console.log('PRICE: ' + '')
+    }*/
+})
+
+$('.hxvKGd').map((index, element) => {
+    $(element).map((index, element) => {
+        $(element).find('ul > li').map((index, element) => {
+            console.log($(element).find('span:nth-child(2)').text().trim())
+        })
+    })
+})
+VM3497:28 15 GB storage
+VM3497:28 100 GB storage
+VM3497:28 Access to Google experts
+VM3497:28 Option to add your family
+VM3497:28 Extra member benefits
+VM3497:28 200 GB storage
+VM3497:28 Access to Google experts
+VM3497:28 Option to add your family
+VM3497:28 Extra member benefits
+VM3497:28 3% back in the Google Store
+VM3497:28 2 TB storage
+VM3497:28 Access to Google experts
+VM3497:28 Option to add your family
+VM3497:28 Extra member benefits
+VM3497:28 10% back in the Google Store
+VM3497:28 10 TB storage
+VM3497:28 Access to Google experts
+VM3497:28 Option to add your family
+VM3497:28 Extra member benefits
+VM3497:28 10% back in the Google Store
+VM3497:28 20 TB storage
+VM3497:28 Access to Google experts
+VM3497:28 Option to add your family
+VM3497:28 Extra member benefits
+VM3497:28 10% back in the Google Store
+VM3497:28 30 TB storage
+VM3497:28 Access to Google experts
+VM3497:28 Option to add your family
+VM3497:28 Extra member benefits
+VM3497:28 10% back in the Google Store
+S.fn.init [prevObject: S.fn.init(7)]

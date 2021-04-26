@@ -1,0 +1,28 @@
+$('.entry-content div').eq(6).map((i, elem) => $(elem).find('table > tbody > tr > td').each((i, elem) => console.log(elem)))
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+VM18792:1 <td>​…​</td>​
+S.fn.init [S.fn.init(16), prevObject: S.fn.init(1)]
+$('.entry-content div').eq(6).map((i, elem) => $(elem).find('table > tbody > tr > td > strong').each((i, elem) => console.log(elem)))
+VM18799:1 <strong>​Personal Free Plan​</strong>​
+VM18799:1 <strong>​Personal Mini Plan​</strong>​
+VM18799:1 <strong>​Pro Solo Basic Plan​</strong>​
+VM18799:1 <strong>​Pro Solo Standard Plan​</strong>​
+VM18799:1 <strong>​Pro Solo Plus Plan​</strong>​
+VM18799:1 <strong>​Pro Teams Standard Plan​</strong>​
+VM18799:1 <strong>​Pro Teams Plus Plan​</strong>​
+VM18799:1 <strong>​Pro Teams Advanced Plan​</strong>​
+S.fn.init [S.fn.init(8), prevObject: S.fn.init(1)]

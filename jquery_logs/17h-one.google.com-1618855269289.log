@@ -1,0 +1,94 @@
+const aa0 = $('.CzTxdd').map((index, element) => {
+    const listing = [];
+    const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} })
+    const type = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} })
+    const price_type = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} })
+    const yrly_price = $(element).find('.VfPpkd-vQzf8d').text().trim()
+        
+    if(yrly_price.length >= 20) {
+        const yrly_price_fix = yrly_price.substring(13, 26)
+        listing.push({'yearly_price': yrly_price_fix})
+    }
+    listing.push({'storage': storage[0].storage})
+    
+    if(type.length != 0){
+        listing.push({'type': type[0].type})
+    }
+
+    try {
+        listing.push({'price': price_type[0].price})
+    }catch(error){
+        listing.push({'price': ''})
+    }
+    return {'lists': listing}
+})
+
+for(let i = 0; i < aa0.length; i++){
+    //aa9[i].lists.push({'test':'test'})
+    const b1122 = $('.hxvKGd').map((index, element) => {
+        const ccs = $(element).map((index, element) => {
+            return ($(element).find('ul > li').map((index, element) => {
+                const span = $(element).find('span:nth-child(2)').text().trim();
+                
+                return {'detail': span}
+            }))
+        })
+        return ccs[0]
+    })
+    //console.log({'test': b1122[1].length})
+    for(let j = 0; j < b1122[i].length; j++){
+        //console.log(b1122[i][j].detail)
+        aa0[i].lists.push({'detail':b1122[i][j].detail})
+    }
+}
+
+console.log(aa0)
+VM2037:45 S.fn.init(7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, prevObject: S.fn.init(7)]0: lists: Array(4)0: {storage: "15 GB"}1: {type: "Free"}2: {price: ""}3: {detail: "15 GB storage"}length: 4__proto__: Array(0)__proto__: Object1: lists: Array(7)0: {yearly_price: "£15.99 / year"}1: {storage: "100 GB"}2: {price: "£1.59 / month"}3: {detail: "100 GB storage"}4: {detail: "Access to Google experts"}5: {detail: "Option to add your family"}6: {detail: "Extra member benefits"}length: 7__proto__: Array(0)__proto__: Object2: {lists: Array(8)}3: {lists: Array(8)}4: {lists: Array(7)}5: {lists: Array(7)}6: {lists: Array(7)}length: 7prevObject: S.fn.init(7) [div.CzTxdd, div.CzTxdd, div.CzTxdd, div.CzTxdd, div.CzTxdd, div.CzTxdd, div.CzTxdd, prevObject: S.fn.init(1)]__proto__: Object(0)
+undefined
+
+---
+
+const a51 = $('.CzTxdd').map((index, element) => {
+    const listing = [];
+    const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} })
+    const type = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} })
+    const price_type = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} })
+    const yrly_price = $(element).find('.VfPpkd-vQzf8d').text().trim()
+        
+    if(yrly_price.length >= 20) {
+        const yrly_price_fix = yrly_price.substring(13, 26)
+        listing.push({'yearly_price': yrly_price_fix})
+    }
+    listing.push({'storage': storage[0].storage})
+    
+    if(type.length != 0){
+        listing.push({'type': type[0].type})
+    }
+​
+    try {
+        listing.push({'price': price_type[0].price})
+    }catch(error){
+        listing.push({'price': ''})
+    }
+    return {'lists': listing}
+})
+​
+for(let i = 0; i < a51.length; i++){
+    const b1122 = $('.hxvKGd').map((index, element) => {
+        const ccs = $(element).map((index, element) => {
+            return ($(element).find('ul > li').map((index, element) => {
+                const span = $(element).find('span:nth-child(2)').text().trim();
+                
+                return {'detail': span}
+            }))
+        })
+        return ccs[0]
+    })
+    for(let j = 0; j < b1122[i].length; j++){
+        const key_name = 'detail_' + [j].toString()
+        a51[i].lists.push({[key_name]:b1122[i][j].detail})
+    }
+}
+​
+console.log(a51)
+

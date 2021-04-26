@@ -1,0 +1,13 @@
+$('.nitro-offscreen table tbody').eq(13).map((index, element) => console.log($(element).find('tr > td > strong')))
+VM10798:1 S.fn.init(8) [strong, strong, strong, strong, strong, strong, strong, strong, prevObject: S.fn.init(1)]
+S.fn.init [prevObject: S.fn.init(1)]
+$('.nitro-offscreen table tbody').eq(13).map((index, element) => $(element).find('tr > td > strong').each((index, element) => console.log(element)))
+VM10921:1 <strong>​Personal Free Plan​</strong>​
+VM10921:1 <strong>​Personal Mini Plan​</strong>​
+VM10921:1 <strong>​Pro Solo Basic Plan​</strong>​
+VM10921:1 <strong>​Pro Solo Standard Plan​</strong>​
+VM10921:1 <strong>​Pro Solo Plus Plan​</strong>​
+VM10921:1 <strong>​Pro Teams Standard Plan​</strong>​
+VM10921:1 <strong>​Pro Teams Plus Plan​</strong>​
+VM10921:1 <strong>​Pro Teams Advanced Plan​</strong>​
+S.fn.init [S.fn.init(8), prevObject: S.fn.init(1)]

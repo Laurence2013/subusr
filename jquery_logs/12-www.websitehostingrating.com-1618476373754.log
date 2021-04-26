@@ -1,0 +1,11 @@
+$('.entry-content > div > table').each((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').each((i, elem) => {
+            const plan_type = $(elem).find('strong').text().trim();
+            const storage_type = $(elem).find('ul').text().trim();
+
+            return {'plan': plan_type, 'storage': storage_type};
+        })
+        console.log(td_one);
+    }
+})

@@ -1,0 +1,46 @@
+$('.CzTxdd').map((index, element) => {
+    const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} })
+    const type = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} })
+    const price_type = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} })
+    const yrly_price = $(element).find('.VfPpkd-vQzf8d').text().trim()
+        
+    if(yrly_price.length >= 20) {
+        const yrly_price_fix = yrly_price.substring(13, 26)
+        console.log('YEARLY PRICE: ' + yrly_price_fix)
+    }else{
+        //const yrly_price_fix2 = yrly_price.substring(0, 15)
+        //console.log('YEARLY PRICE: ' + yrly_price_fix2)
+    }
+
+    console.log('STORAGE: ' + storage[0].storage)
+    
+    if(type.length != 0){
+        console.log('TYPE: ' + type[0].type)
+    }
+
+    try{
+        console.log('PRICE: ' + price_type[0].price)
+    }catch(error){
+        console.log('PRICE: ' + error)
+    }
+})
+
+VM655:15 STORAGE: 15 GB
+VM655:18 TYPE: Free
+VM655:24 PRICE: TypeError: Cannot read property 'price' of undefined
+VM655:9 YEARLY PRICE: £15.99 / year
+VM655:15 STORAGE: 100 GB
+VM655:22 PRICE: £1.59 / month
+VM655:9 YEARLY PRICE: £24.99 / year
+VM655:15 STORAGE: 200 GB
+VM655:22 PRICE: £2.49 / month
+VM655:9 YEARLY PRICE: £79.99 / year
+VM655:15 STORAGE: 2 TB
+VM655:22 PRICE: £7.99 / month
+VM655:15 STORAGE: 10 TB
+VM655:22 PRICE: £39.99 / month
+VM655:15 STORAGE: 20 TB
+VM655:22 PRICE: £79.99 / month
+VM655:15 STORAGE: 30 TB
+VM655:22 PRICE: £119.99 / month
+S.fn.init [prevObject: S.fn.init(7)]

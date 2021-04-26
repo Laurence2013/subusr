@@ -1,0 +1,18 @@
+$('.post-body').map((index, element) => {
+    const ul = $(element).find('ul:nth-of-type(2)').map((index, element) => {
+        const li = $(element).find('li').map((index, element) => {
+            const li = $(element).text();
+            const li_split = li.split('–');
+
+            console.log(li_split);
+        })
+    })
+})
+VM3795:7 (2) ["15GB ", " Free plan"]
+VM3795:7 (2) ["100GB ", " £1.99 per month"]
+VM3795:7 (2) ["200GB ", " £2.99 per month"]
+VM3795:7 (2) ["2TB ", " £9.99 per month"]
+VM3795:7 (2) ["10TB ", " £79.99 per month"]
+VM3795:7 (2) ["20TB ", " £159.99 per month"]
+VM3795:7 (2) ["30TB ", " £239.99 per month"]
+S.fn.init [prevObject: S.fn.init(2)]

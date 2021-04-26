@@ -1,0 +1,24 @@
+$('.entry-content .nitro-offscreen').eq(8).map((i, elem) => $(elem).find('table > tbody > tr > td').each((i, elem) => {
+    const title_name = $(elem).find('strong').text();
+    const storage = { storage_a: $(elem).find('ul li:nth-child(1)').text(), storage_b: $(elem).find('ul li:nth-child(2)').text() };
+    const sub_type = $(elem).find('a').text();
+
+    console.log(sub_type);
+}))
+VM23437:6 
+VM23437:6 Forever FREE
+VM23437:6 
+VM23437:6 $5/month
+VM23437:6 
+VM23437:6 $8/month
+VM23437:6 
+VM23437:6 $10/month
+VM23437:6 
+VM23437:6 $15/month
+VM23437:6 
+VM23437:6 $5/month
+VM23437:6 
+VM23437:6 $8/month
+VM23437:6 
+VM23437:6 $15/month
+S.fn.init [S.fn.init(16), prevObject: S.fn.init(1)]

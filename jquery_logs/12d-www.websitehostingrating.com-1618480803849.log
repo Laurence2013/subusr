@@ -1,0 +1,55 @@
+$('.entry-content > div > table').map((i, element) => {
+    const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+        const plan_type = $(elem).find('strong').text().trim();
+        const storage_type = $(elem).find('ul').text().trim();
+            
+        return {'plan': plan_type, 'storage': storage_type};
+    })
+    const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+        const bill_type = $(elem).find('a').text().trim();
+          
+        return {'bill': bill_type};
+    })
+    console.log(td_one[i], td_two[i]);    
+})
+VM14137:13 {plan: "", storage: ""} {bill: ""}
+VM14137:13 {plan: "Personal Mini Plan", storage: "200 GB Storage 200 GB Transfer"} {bill: "$5/month"}
+VM14137:13 {plan: "Premium Plus Plan", storage: "2 TB Storage"} {bill: "$9.99/month$7.99/month$350"}
+VM14137:13 {plan: "Pro+ Plan", storage: "5 TB storage 8 TB bandwidth limit"} {bill: "$17.99 per month$179.99 per year$499 lifetime"}
+S.fn.init [prevObject: S.fn.init(4)]
+
+---
+
+$('.entry-content > div > table').map((i, element) => {
+    const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+        console.log(elem);
+        const plan_type = $(elem).find('strong').text().trim();
+        const storage_type = $(elem).find('ul').text().trim();
+            
+        //return {'plan': plan_type, 'storage': storage_type};
+    });
+    const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+        console.log(elem);
+        const bill_type = $(elem).find('a').text().trim();
+          
+        //return {'bill': bill_type};
+    });
+})
+
+---
+
+$('.entry-content > div > table').map((i, element) => {
+    const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+        const plan_type = $(elem).find('strong').map((i, elem) => {
+            console.log($(elem).text());
+        });
+        //const storage_type = $(elem).find('ul').text().trim();
+            
+        //return {'plan': plan_type, 'storage': storage_type};
+    });
+    const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+        const bill_type = $(elem).find('a').text().trim();
+          
+        //return {'bill': bill_type};
+    });
+})

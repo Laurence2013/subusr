@@ -1,0 +1,120 @@
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').each((i, elem) => {
+            const plan_type = $(elem).find('strong').map((i, elem) => {
+
+                return {'plan_type': $(elem).text()};
+            });
+            console.log(plan_type[0].plan_type);
+            //const storage_type = $(elem).find('ul').text().trim();
+
+            /*if(storage_type != ''){
+                return {'plan': plan_type.text(), 'storage': storage_type};
+            }*/
+        });
+        /*const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+
+            return {'bill': bill_type};
+        });*/
+    }
+})
+VM5347:8 Free Plan
+VM5347:8 Premium Plan
+VM5347:8 Premium Plus Plan
+VM5347:8 Business Plan
+VM5347:8 Family Plan
+VM5347:8 Free Plan
+VM5347:8 Lite Plan
+VM5347:8 Pro Plan
+VM5347:8 Pro+ Plan
+S.fn.init [prevObject: S.fn.init(3)]
+
+---
+
+THe big difference using .each() and .map()
+
+---
+
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+            //console.log(i);
+            const plan_type = $(elem).find('strong').map((i, elem) => {
+
+                return {'plan_type': $(elem).text()};
+            });
+            //console.log(plan_type[0].plan_type);
+            const storage_type = $(elem).find('ul').text().trim();
+
+            if(storage_type != ''){
+                //console.log(i, {'plan': plan_type[0].plan_type, 'storage': storage_type});
+                return {'plan': plan_type[0].plan_type, 'storage': storage_type};
+            }
+        });
+        for(let i = 0; i < td_one.length; i++){
+            console.log(td_one[i]);
+        }
+        /*const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+
+            return {'bill': bill_type};
+        });*/
+    }
+})
+
+---
+
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').each((i, elem) => {
+            //console.log(i);
+            const plan_type = $(elem).find('strong').map((i, elem) => {
+
+                return {'plan_type': $(elem).text()};
+            });
+            //console.log(plan_type[0].plan_type);
+            const storage_type = $(elem).find('ul').text().trim();
+
+            if(storage_type != ''){
+                //console.log(i, {'plan': plan_type[0].plan_type, 'storage': storage_type});
+                return {'plan': plan_type[0].plan_type, 'storage': storage_type};
+            }
+        });
+        for(let i = 0; i < td_one.length; i++){
+            console.log(td_one[i]);
+        }
+        /*const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+
+            return {'bill': bill_type};
+        });*/
+    }
+})
+
+---
+
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+            const plan_type = $(elem).find('strong').map((i, elem) => {
+
+                return {'plan_type': $(elem).text()};
+            });
+            const storage_type = $(elem).find('ul').text().trim();
+
+            if(storage_type != ''){
+                return {'plan': plan_type[0].plan_type, 'storage': storage_type};
+            }
+        });
+        const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+
+            return {'bill': bill_type};
+        });
+        for(let i = 0; i < td_one.length; i++){
+            console.log(td_one[i], td_two[i]);
+        }
+    }
+})
+

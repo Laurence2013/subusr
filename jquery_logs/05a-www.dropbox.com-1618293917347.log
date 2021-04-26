@@ -1,0 +1,68 @@
+$('.arbor-grid-element').map((index, element) => {
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+    const monthly = $(element).find('.segmented-plan-card__price').text().substr(0, 6).replace('£','')
+    const info = $(element).find('.segmented-plan-card__description').text();
+    const user_plan = $(element).find('.segmented-plan-card__base-feature-list').map((index, element) => {
+        const user_type = $(element).find('li:nth-child(1) > span').map((index, element) => {
+            const user_type = $(element).text().trim()
+            return {'user_type': user_type}
+        })
+        const storage = $(element).find('li:nth-child(2) > span').map((index, element) => {
+            const storage_type = $(element).text().trim()
+            console.log(storage_type)
+        })
+    })
+    /*const devices = $(element).find('.segmented-plan-card__feature-list ').map((index, element) => {
+        const details = $(element).find('ul > li').map((index, element) => {
+            const detail = 'detail_' + index.toString()
+            const li = $(element).text().trim()
+
+            return {[detail]: li}
+        })
+        return details
+    })
+    for(let i = 0; i < devices[0].length; i++){
+        console.log(devices[0][i])
+    }*/
+})
+VM9542:13 2 GB of encrypted storage
+VM9542:13 2 TB (2,000 GB) of encrypted storage
+VM9542:13 Share 2 TB (2,000 GB) of encrypted storage
+S.fn.init [prevObject: S.fn.init(3)]
+
+---
+
+$('.arbor-grid-element').map((index, element) => {
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+    const monthly = $(element).find('.segmented-plan-card__price').text().substr(0, 6).replace('£','')
+    const info = $(element).find('.segmented-plan-card__description').text();
+    const user_plan = $(element).find('.segmented-plan-card__base-feature-list').map((index, element) => {
+        const user_type = $(element).find('li:nth-child(1) > span').map((index, element) => {
+            const user_type = $(element).text().trim()
+            return {'user_type': user_type}
+        })
+        const storage = $(element).find('li:nth-child(2) > span').map((index, element) => {
+            const storage_type = $(element).text().trim()
+            return {'storage': storage_type}
+        })
+        return {'user_type': user_type[index], 'storage': storage[index]}
+    })
+    const devices = $(element).find('.segmented-plan-card__feature-list ').map((index, element) => {
+        const details = $(element).find('ul > li').map((index, element) => {
+            const detail = 'detail_' + index.toString()
+            const li = $(element).text().trim()
+            
+            return {[detail]: li}
+        })
+        return details
+    })
+    const details = []
+    for(let i = 0; i < devices[0].length; i++){
+        details.push(devices[0][i])
+    }
+    const desc = [] 
+    desc.push({'audience': audience, 'plan_name': plan_name, 'monthly': monthly, 'info': info, 'user_plan': user_plan, 'details': details, 'yearly_price': ''})
+    console.log(desc)
+})

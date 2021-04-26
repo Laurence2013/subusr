@@ -1,0 +1,15 @@
+$('.entry-content div').map((i, elem) => $(elem).find('table tbody').map((i, element) => {
+    if(i === 0){
+        const storage = {
+            'strong': $(element).find('tr td').map((i, elem) => $(elem).find('strong').text()),
+            'ul': $(element).find('tr td').map((i, elem) => $(elem).find('ul').text())
+        };
+        if((storage.strong.length) != 0){
+            console.log(storage.strong, storage.ul)
+        }
+    }
+}))
+VM4983:8 S.fn.init(16) ["Personal Free Plan", "", "Personal Mini Plan", "", "Pro Solo Basic Plan", "", "Pro Solo Standard Plan", "", "Pro Solo Plus Plan", "", "Pro Teams Standard Plan", "", "Pro Teams Plus Plan", "", "Pro Teams Advanced Plan", "", prevObject: S.fn.init(16)] S.fn.init(16) [" 5 GB Storage 5 GB Transfer ", "", " 200 GB Storage 200 GB Transfer ", "", " 2 TB Storage Unlimited Transfer ", "", " 3 TB Storage Unlimited Transfer ", "", " 4 TB Storage Unlimited Transfer ", "", " 1 TB Storage per user Unlimited Transfer ", "", " 4 TB Storage per user Unlimited Transfer ", "", " 10 TB Storage per user Unlimited Transfer ", "", prevObject: S.fn.init(16)]
+VM4983:8 S.fn.init(10) ["Free Plan", "", "Premium Plan", "", "Premium Plus Plan", "", "Business Plan", "", "Family Plan", "", prevObject: S.fn.init(10)] S.fn.init(10) [" 10 GB Storage ", "", " 500 GB Storage ", " Monthly plan: $4.99/month Annual plan: $3.99/mont…d yearly) Lifetime plan: $175 (one-time payment) ", " 2 TB Storage ", " Monthly plan: $9.99/month Annual plan: $7.99/mont…d yearly) Lifetime plan: $350 (one-time payment) ", " 1 TB Storage per user ", " Monthly plan: $9.99/month Annual plan: $29.97/month ($287.64 billed yearly) ", " 2 TB Storage (up to 5 users) ", "", prevObject: S.fn.init(10)]
+VM4983:8 S.fn.init(8) ["Free Plan", "", "Lite Plan", "", "Pro Plan", "", "Pro+ Plan", "", prevObject: S.fn.init(8)] S.fn.init(8) [" 10 GB storage 3 GB bandwidth limit ", "", " 150 GB storage 250 GB bandwidth limit ", "  $19.99 per year $59 lifetime (one-off payment) ", " 1 TB storage 2 TB bandwidth limit ", " $4.99 per month $49.99 per year $149 lifetime (one-off payment) ", " 5 TB storage 8 TB bandwidth limit ", " $17.99 per month $179.99 per year $499 lifetime (one-off payment) ", prevObject: S.fn.init(8)]
+S.fn.init(37) [S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), prevObject: S.fn.init(37)]

@@ -1,0 +1,36 @@
+$('.arbor-grid-element').map((index, element) => {
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+    const monthly = $(element).find('.segmented-plan-card__price').text().substr(0, 6).replace('£','')
+    const info = $(element).find('.segmented-plan-card__description').text();
+    const user_plan = $(element).find('.segmented-plan-card__base-feature-list').map((index, element) => {
+        const user_type = $(element).find('li:nth-child(1) > span').map((index, element) => {
+            const user_type = $(element).text().trim()
+            return {'user_type': user_type}
+        })
+        const storage = $(element).find('li:nth-child(2) > span').map((index, element) => {
+            const storage_type = $(element).text().trim()
+            return {'storage': storage_type}
+        })
+        return {'user_type': user_type[index], 'storage': storage[index]}
+    })
+    const devices = $(element).find('.segmented-plan-card__feature-list ').map((index, element) => {
+        const details = $(element).find('ul > li').map((index, element) => {
+            const detail = 'detail_' + index.toString()
+            const li = $(element).text().trim()
+            
+            return {[detail]: li}
+        })
+        return details
+    })
+    const details = []
+    for(let i = 0; i < devices[0].length; i++){
+        details.push(devices[0][i])
+    }
+    const test = {'audience': audience, 'plan_name': plan_name, 'monthly': monthly, 'info': info, 'user_plan': user_plan, 'details': details, 'yearly_price': ''}
+    console.log(test)
+})
+VM11715:31 {audience: "For starters", plan_name: "Basic", monthly: "Free", info: "2 GB of storage to help you store or share a few files for a quick project.", user_plan: S.fn.init(1), …}audience: "For starters"details: [{…}]0: {detail_0: "Up to 3 devices"}length: 1__proto__: Array(0)info: "2 GB of storage to help you store or share a few files for a quick project."monthly: "Free"plan_name: "Basic"user_plan: S.fn.init [{…}, prevObject: S.fn.init(1)]yearly_price: ""__proto__: Object
+VM11715:31 {audience: "For individuals", plan_name: "Plus", monthly: "9.99 ", info: "Simple, secure file storage and sharing, with built-in tools to help you get and stay organized.", user_plan: S.fn.init(1), …}audience: "For individuals"details: (3) [{…}, {…}, {…}]info: "Simple, secure file storage and sharing, with built-in tools to help you get and stay organized."monthly: "9.99 "plan_name: "Plus"user_plan: S.fn.init [{…}, prevObject: S.fn.init(1)]yearly_price: ""__proto__: Object
+VM11715:31 {audience: "For households", plan_name: "Family", monthly: "16.99", info: "Individual Plus accounts and a place for family sh…elp keep your loved ones organized and connected.", user_plan: S.fn.init(1), …}
+S.fn.init [prevObject: S.fn.init(3)]

@@ -1,0 +1,14 @@
+$('.entry-content div').map((i, elem) => $(elem).find('table tbody').map((i, element) => {
+    if(i === 0){
+        const storage = {
+            'strong': $(element).find('tr td').map((i, elem) => $(elem).find('strong').text()),
+            'ul': $(element).find('tr td').map((i, elem) => $(elem).find('ul').text())
+        };
+        console.log(storage);
+    }
+}))
+VM4631:7 {strong: S.fn.init(0), ul: S.fn.init(0)}
+VM4631:7 {strong: S.fn.init(16), ul: S.fn.init(16)}
+VM4631:7 {strong: S.fn.init(10), ul: S.fn.init(10)}
+VM4631:7 {strong: S.fn.init(8), ul: S.fn.init(8)}
+S.fn.init(37) [S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), prevObject: S.fn.init(37)]

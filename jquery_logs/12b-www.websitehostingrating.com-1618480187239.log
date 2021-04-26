@@ -1,0 +1,26 @@
+$('.entry-content > div > table').map((i, element) => {
+    
+        const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+            const plan_type = $(elem).find('strong').text().trim();
+            const storage_type = $(elem).find('ul').text().trim();
+            
+            return {'plan': plan_type, 'storage': storage_type};
+        })
+        const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+            
+            return {'bill': bill_type};
+        })
+
+        console.log(td_one[0].plan, td_two[0].bill);    
+        console.log(td_one[1].plan, td_two[1].bill);  
+})
+VM13747:15  
+VM13747:16 1.Zero-knowledge privacy and client-side encryptionCheaper than DropboxOffers 5 GB free storage on the free planFile link and folder sharing 
+VM13747:15 Personal Free Plan Forever FREE
+VM13747:16 Personal Mini Plan $5/month
+VM13747:15 Free Plan Forever FREE
+VM13747:16 Premium Plan $4.99/month$3.99/month$175
+VM13747:15 Free Plan FREE
+VM13747:16 Lite Plan $19.99 per year$59 lifetime
+S.fn.init [prevObject: S.fn.init(4)]

@@ -1,0 +1,39 @@
+$('.entry-content div').map((i, elem) => $(elem).find('table tbody tr td strong').map((i, elem) => console.log(i, elem)))
+VM28398:1 0 <strong>​1.​</strong>​
+VM28398:1 1 <strong>​Zero-knowledge privacy and client-side encryption​</strong>​
+VM28398:1 2 <strong>​Cheaper than Dropbox​</strong>​
+VM28398:1 3 <strong>​Offers 5 GB free storage on the free plan​</strong>​
+VM28398:1 4 <strong>​File link and folder sharing​</strong>​
+VM28398:1 5 <strong>​2.​</strong>​
+VM28398:1 6 <strong>​The free plan gives you 10 GB of storage​</strong>​
+VM28398:1 7 <strong>​…​</strong>​
+VM28398:1 8 <strong>​pCloud comes with dozens of features to make collaboration easy​</strong>​
+VM28398:1 9 <strong>​File link and folder sharing​</strong>​
+VM28398:1 10 <strong>​3.​</strong>​
+VM28398:1 11 <strong>​4.​</strong>​
+VM28398:1 12 <strong>​5.​</strong>​
+VM28398:1 13 <strong>​6.​</strong>​
+VM28398:1 14 <strong>​7.​</strong>​
+VM28398:1 15 <strong>​8.​</strong>​
+VM28398:1 16 <strong>​9.​</strong>​
+VM28398:1 17 <strong>​10.​</strong>​
+VM28398:1 18 <strong>​11.​</strong>​
+VM28398:1 19 <strong>​12.​</strong>​
+VM28398:1 0 <strong>​Personal Free Plan​</strong>​
+VM28398:1 1 <strong>​Personal Mini Plan​</strong>​
+VM28398:1 2 <strong>​Pro Solo Basic Plan​</strong>​
+VM28398:1 3 <strong>​Pro Solo Standard Plan​</strong>​
+VM28398:1 4 <strong>​Pro Solo Plus Plan​</strong>​
+VM28398:1 5 <strong>​Pro Teams Standard Plan​</strong>​
+VM28398:1 6 <strong>​Pro Teams Plus Plan​</strong>​
+VM28398:1 7 <strong>​Pro Teams Advanced Plan​</strong>​
+VM28398:1 0 <strong>​Free Plan​</strong>​
+VM28398:1 1 <strong>​Premium Plan​</strong>​
+VM28398:1 2 <strong>​Premium Plus Plan​</strong>​
+VM28398:1 3 <strong>​Business Plan​</strong>​
+VM28398:1 4 <strong>​Family Plan​</strong>​
+VM28398:1 0 <strong>​Free Plan​</strong>​
+VM28398:1 1 <strong>​Lite Plan​</strong>​
+VM28398:1 2 <strong>​Pro Plan​</strong>​
+VM28398:1 3 <strong>​Pro+ Plan​</strong>​
+S.fn.init(49) [S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), prevObject: S.fn.init(49)]

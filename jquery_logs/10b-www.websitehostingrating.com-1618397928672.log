@@ -1,0 +1,10 @@
+$('.entry-content div').map((i, elem) => $(elem).find('table tbody tr').map((i, elem) => {
+    if(i === 1){
+        console.log(elem);
+    }
+}))
+VM30743:3 <tr class=​"footable-detail-row">​…​</tr>​
+VM30743:3 <tr>​…​</tr>​
+VM30743:3 <tr>​…​</tr>​
+VM30743:3 <tr>​…​</tr>​
+S.fn.init(49) [S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), prevObject: S.fn.init(49)]

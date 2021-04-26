@@ -1,0 +1,45 @@
+$('.arbor-grid-element').map((index, element) => {
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+    const monthly = $(element).find('.segmented-plan-card__price').text().substr(0, 6).replace('£','')
+    const info = $(element).find('.segmented-plan-card__description').text();
+    const user_plan = $(element).find('.segmented-plan-card__base-feature-list').text();
+    const devices = $(element).find('.segmented-plan-card__feature-list ').map((index, element) => {
+        const details = $(element).find('ul > li').map((index, element) => {
+            const detail = 'detail_' + index.toString()
+            const li = $(element).text().trim()
+            
+            return {[detail]: li}
+        })
+        console.log(details)
+    })
+    
+    //console.log(devices)
+})
+VM6209:14 S.fn.init [{…}, prevObject: S.fn.init(1)]
+VM6209:14 S.fn.init(3) [{…}, {…}, {…}, prevObject: S.fn.init(3)]
+VM6209:14 S.fn.init(5) [{…}, {…}, {…}, {…}, {…}, prevObject: S.fn.init(5)]
+S.fn.init [prevObject: S.fn.init(3)]
+
+---
+
+$('.arbor-grid-element').map((index, element) => {
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+    const monthly = $(element).find('.segmented-plan-card__price').text().substr(0, 6).replace('£','')
+    const info = $(element).find('.segmented-plan-card__description').text();
+    const user_plan = $(element).find('.segmented-plan-card__base-feature-list').text();
+    const devices = $(element).find('.segmented-plan-card__feature-list ').map((index, element) => {
+        const details = $(element).find('ul > li').map((index, element) => {
+            const detail = 'detail_' + index.toString()
+            const li = $(element).text().trim()
+            
+            return {[detail]: li}
+        })
+        return details
+    })
+    /*for(let i = 0; i < devices[0].length; i++){
+        console.log(devices[0][i])
+    }*/
+    console.log(user_plan)
+})

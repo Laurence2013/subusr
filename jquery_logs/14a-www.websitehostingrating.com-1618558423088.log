@@ -1,0 +1,31 @@
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').each((i, elem) => {
+            const plan_type = $(elem).find('strong').map((i, elem) => {
+
+                return {'plan_type': $(elem).text()};
+            });
+            //console.log(plan_type[0].plan_type);
+            const storage_type = $(elem).find('ul').text().trim();
+
+            if(storage_type != ''){
+                console.log({'plan': plan_type[0].plan_type, 'storage': storage_type});
+            }
+        });
+        /*const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+
+            return {'bill': bill_type};
+        });*/
+    }
+})
+VM5608:12 {plan: "Free Plan", storage: "10 GB Storage"}
+VM5608:12 {plan: "Premium Plan", storage: "500 GB Storage"}
+VM5608:12 {plan: "Premium Plus Plan", storage: "2 TB Storage"}
+VM5608:12 {plan: "Business Plan", storage: "1 TB Storage per user"}
+VM5608:12 {plan: "Family Plan", storage: "2 TB Storage (up to 5 users)"}
+VM5608:12 {plan: "Free Plan", storage: "10 GB storage 3 GB bandwidth limit"}
+VM5608:12 {plan: "Lite Plan", storage: "150 GB storage 250 GB bandwidth limit"}
+VM5608:12 {plan: "Pro Plan", storage: "1 TB storage 2 TB bandwidth limit"}
+VM5608:12 {plan: "Pro+ Plan", storage: "5 TB storage 8 TB bandwidth limit"}
+S.fn.init [prevObject: S.fn.init(3)]

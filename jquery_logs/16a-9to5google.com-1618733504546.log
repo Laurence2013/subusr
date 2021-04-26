@@ -1,0 +1,13 @@
+$('.post-body').map((index, element) => {
+    const ul = $(element).find('ul:nth-of-type(2)').map((index, element) => {
+        const li = $(element).find('li').map((index, element) => {
+            const li = $(element).text();
+            const li_split = li.split('–');
+
+            return {'storage': li_split[0].trim(), 'price': li_split[1].trim()}
+        })
+        console.log(li[1]);
+    })
+})
+VM4039:9 {storage: "100GB", price: "£1.99 per month"}
+S.fn.init [prevObject: S.fn.init(2)]

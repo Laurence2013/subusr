@@ -1,0 +1,45 @@
+$('.entry-content > div > table').each((i, element) => {
+    if(i != 0){
+        $(element).find('tr > td').each((i, elem) => {
+            const plan_type = $(elem).find('strong').text().trim();
+            const storage_type = $(elem).find('ul').text().trim();
+               
+            console.log(storage_type);
+        })
+    }
+})
+VM12154:7 5 GB Storage 5 GB Transfer
+VM12154:7 
+VM12154:7 200 GB Storage 200 GB Transfer
+VM12154:7 
+VM12154:7 2 TB Storage Unlimited Transfer
+VM12154:7 
+VM12154:7 3 TB Storage Unlimited Transfer
+VM12154:7 
+VM12154:7 4 TB Storage Unlimited Transfer
+VM12154:7 
+VM12154:7 1 TB Storage per user Unlimited Transfer
+VM12154:7 
+VM12154:7 4 TB Storage per user Unlimited Transfer
+VM12154:7 
+VM12154:7 10 TB Storage per user Unlimited Transfer
+VM12154:7 
+VM12154:7 10 GB Storage
+VM12154:7 
+VM12154:7 500 GB Storage
+VM12154:7 Monthly plan: $4.99/month Annual plan: $3.99/month ($47.88 billed yearly) Lifetime plan: $175 (one-time payment)
+VM12154:7 2 TB Storage
+VM12154:7 Monthly plan: $9.99/month Annual plan: $7.99/month ($95.88 billed yearly) Lifetime plan: $350 (one-time payment)
+VM12154:7 1 TB Storage per user
+VM12154:7 Monthly plan: $9.99/month Annual plan: $29.97/month ($287.64 billed yearly)
+VM12154:7 2 TB Storage (up to 5 users)
+VM12154:7 
+VM12154:7 10 GB storage 3 GB bandwidth limit
+VM12154:7 
+VM12154:7 150 GB storage 250 GB bandwidth limit
+VM12154:7 $19.99 per year $59 lifetime (one-off payment)
+VM12154:7 1 TB storage 2 TB bandwidth limit
+VM12154:7 $4.99 per month $49.99 per year $149 lifetime (one-off payment)
+VM12154:7 5 TB storage 8 TB bandwidth limit
+VM12154:7 $17.99 per month $179.99 per year $499 lifetime (one-off payment)
+S.fn.init(4) [table#footable_33964.foo-table.ninja_footable.foo_table_33964.ninja_table_unique_id_1687980641_3396…, table, table, table, prevObject: S.fn.init(1)]

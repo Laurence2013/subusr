@@ -1,0 +1,59 @@
+function main(){
+    const document_name = 'GoogleDrive';
+    const test = $('.CzTxdd').map((index, element) => {
+        const listing = [];
+        const audience = '';
+        const info = '';
+        const user_plan = function(element){
+            const user_type = {'user_type': ''};
+            const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} });
+            return {'user_type': user_type,'storage': storage[0]};
+        }
+        const plan_name = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} });
+        const monthly = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} });
+        const yearly_price = $(element).find('.VfPpkd-vQzf8d').text().trim();
+
+        if(yearly_price.length >= 20) {
+            const yrly_price_fix = yearly_price.substring(13, 26).replace('£','').split(' ')[0];
+            listing.push({'yearly_price': yrly_price_fix});
+        }
+        listing.push({'user_plan': user_plan(element)});
+
+        if(plan_name.length != 0){
+            listing.push({'plan_name': plan_name[0].type});
+        }else{
+            listing.push({'plan_name': ''});
+        }
+        try {
+            const price = monthly[0].price.replace('£','').split(' ')[0];
+            listing.push({'monthly': price});
+        }catch(error){
+            listing.push({'monthly': ''});
+        }
+        listing.push({'audience': audience})
+        listing.push({'info': info})
+
+        return {'desc': listing}
+    }).get()
+
+    for(let i = 0; i < test.length; i++){
+        console.log(test[i].desc)
+    }
+}
+
+main()
+VM3934:40 (5) [{…}, {…}, {…}, {…}, {…}]
+VM3934:40 (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+VM3934:40 (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+VM3934:40 (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+VM3934:40 (5) [{…}, {…}, {…}, {…}, {…}]
+VM3934:40 (5) [{…}, {…}, {…}, {…}, {…}]
+VM3934:40 (5) [{…}, {…}, {…}, {…}, {…}]
+VM3934:40 (5) [{…}, {…}, {…}, {…}, {…}]
+VM3934:40 (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+VM3934:40 (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+VM3934:40 (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+VM3934:40 (5) [{…}, {…}, {…}, {…}, {…}]
+VM3934:40 (5) [{…}, {…}, {…}, {…}, {…}]
+VM3934:40 (5) [{…}, {…}, {…}, {…}, {…}]
+undefined

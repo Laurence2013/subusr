@@ -1,0 +1,15 @@
+$('.entry-content div').map((i, elem) => $(elem).find('table tbody').map((i, element) => {
+    if(i === 0){
+        const storage = {
+            'strong': $(element).find('tr td').map((i, elem) => $(elem).find('strong').text()),
+            'ul': $(element).find('tr td').map((i, elem) => $(elem).find('ul').text())
+        };
+        if((storage.strong.length) != 0){
+            console.log(storage.strong[i], storage.ul[i])
+        }
+    }
+}))
+VM5320:8 Personal Free Plan  5 GB Storage 5 GB Transfer 
+VM5320:8 Free Plan  10 GB Storage 
+VM5320:8 Free Plan  10 GB storage 3 GB bandwidth limit 
+S.fn.init(37) [S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), prevObject: S.fn.init(37)]

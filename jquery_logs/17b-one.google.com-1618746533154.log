@@ -1,0 +1,35 @@
+$('.CzTxdd').map((index, element) => {
+    const storage = $(element).find('.Qnu87d').map((index, element) => console.log($(element).text().trim()))
+    const type = $(element).find('.tKV7vb').map((index, element) => console.log($(element).find('span').text().trim()))
+    const price_type = $(element).find('.VfPpkd-vQzf8d').map((index, element) => {
+        const monthly_price = console.log($(element).find('div > span').text().trim())
+    })
+    const yrly_price = $(element).find('.VfPpkd-vQzf8d').text().trim()
+
+    if(yrly_price.length >= 20) {
+        const yrly_price_fix = yrly_price.substring(13)
+        console.log(yrly_price_fix)
+    }
+    
+})
+VM8895:2 15 GB
+VM8895:3 Free
+VM8895:2 100 GB
+VM8895:5 £1.59 / month
+VM8895:5 
+VM8895:11 £15.99 / year
+VM8895:2 200 GB
+VM8895:5 £2.49 / month
+VM8895:5 
+VM8895:11 £24.99 / year
+VM8895:2 2 TB
+VM8895:5 £7.99 / month
+VM8895:5 
+VM8895:11 £79.99 / year
+VM8895:2 10 TB
+VM8895:5 £39.99 / month
+VM8895:2 20 TB
+VM8895:5 £79.99 / month
+VM8895:2 30 TB
+VM8895:5 £119.99 / month
+S.fn.init [prevObject: S.fn.init(7)]

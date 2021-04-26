@@ -1,0 +1,23 @@
+$('.entry-content div').eq(6).map((i, elem) => $(elem).find('table > tbody > tr > td').each((i, elem) => {
+    const title_name = $(elem).find('strong').text();
+    const storage = { storage_a: $(elem).find('ul li:nth-child(1)').text(), storage_b: $(elem).find('ul li:nth-child(2)').text() }
+
+    console.log(storage);
+}))
+VM20436:5 {storage_a: "5 GB Storage", storage_b: "5 GB Transfer"}
+VM20436:5 {storage_a: "", storage_b: ""}
+VM20436:5 {storage_a: "200 GB Storage", storage_b: "200 GB Transfer"}
+VM20436:5 {storage_a: "", storage_b: ""}
+VM20436:5 {storage_a: "2 TB Storage", storage_b: "Unlimited Transfer"}
+VM20436:5 {storage_a: "", storage_b: ""}
+VM20436:5 {storage_a: "3 TB Storage", storage_b: "Unlimited Transfer"}
+VM20436:5 {storage_a: "", storage_b: ""}
+VM20436:5 {storage_a: "4 TB Storage", storage_b: "Unlimited Transfer"}
+VM20436:5 {storage_a: "", storage_b: ""}
+VM20436:5 {storage_a: "1 TB Storage per user", storage_b: "Unlimited Transfer"}
+VM20436:5 {storage_a: "", storage_b: ""}
+VM20436:5 {storage_a: "4 TB Storage per user", storage_b: "Unlimited Transfer"}
+VM20436:5 {storage_a: "", storage_b: ""}
+VM20436:5 {storage_a: "10 TB Storage per user", storage_b: "Unlimited Transfer"}
+VM20436:5 {storage_a: "", storage_b: ""}
+S.fn.init [S.fn.init(16), prevObject: S.fn.init(1)]

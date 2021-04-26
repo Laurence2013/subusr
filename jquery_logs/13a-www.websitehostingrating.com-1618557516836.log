@@ -1,0 +1,44 @@
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').each((i, elem) => {
+            const plan_type = $(elem).find('strong').each((i, elem) => {
+
+                return {'plan_type': $(elem).text()};
+            });
+            plan_type.map((i, elem) => console.log(elem[i].plan_type));
+            const storage_type = $(elem).find('ul').text().trim();
+
+            if(storage_type != ''){
+                return {'plan': plan_type.text(), 'storage': storage_type};
+            }
+        });
+        const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+
+            return {'bill': bill_type};
+        });
+    }
+})
+VM4321:8 Uncaught TypeError: Cannot read property 'plan_type' of undefined
+    at HTMLElement.<anonymous> (<anonymous>:8:60)
+    at jquery-3.5.0.min.js:2
+    at Function.map (jquery-3.5.0.min.js:2)
+    at S.fn.init.map (jquery-3.5.0.min.js:2)
+    at HTMLTableCellElement.<anonymous> (<anonymous>:8:23)
+    at Function.each (jquery-3.5.0.min.js:2)
+    at S.fn.init.each (jquery-3.5.0.min.js:2)
+    at HTMLTableElement.<anonymous> (<anonymous>:3:64)
+    at jquery-3.5.0.min.js:2
+    at Function.map (jquery-3.5.0.min.js:2)
+(anonymous) @ VM4321:8
+(anonymous) @ jquery-3.5.0.min.js:2
+map @ jquery-3.5.0.min.js:2
+map @ jquery-3.5.0.min.js:2
+(anonymous) @ VM4321:8
+each @ jquery-3.5.0.min.js:2
+each @ jquery-3.5.0.min.js:2
+(anonymous) @ VM4321:3
+(anonymous) @ jquery-3.5.0.min.js:2
+map @ jquery-3.5.0.min.js:2
+map @ jquery-3.5.0.min.js:2
+(anonymous) @ VM4321:1

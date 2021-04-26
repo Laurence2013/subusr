@@ -1,0 +1,18 @@
+$('.nitro-offscreen table tbody').eq(13).map((index, element) => $(element).find('tr > td > ul li').each((index, element) => console.log($(element).text())))
+VM11652:1 5 GB Storage
+VM11652:1 5 GB Transfer
+VM11652:1 200 GB Storage
+VM11652:1 200 GB Transfer
+VM11652:1 2 TB Storage
+VM11652:1 Unlimited Transfer
+VM11652:1 3 TB Storage
+VM11652:1 Unlimited Transfer
+VM11652:1 4 TB Storage
+VM11652:1 Unlimited Transfer
+VM11652:1 1 TB Storage per user
+VM11652:1 Unlimited Transfer
+VM11652:1 4 TB Storage per user
+VM11652:1 Unlimited Transfer
+VM11652:1 10 TB Storage per user
+VM11652:1 Unlimited Transfer
+S.fn.init [S.fn.init(16), prevObject: S.fn.init(1)]

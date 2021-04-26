@@ -1,0 +1,29 @@
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+            const plan_type = $(elem).find('strong').map((i, elem) => {
+
+                return {'plan_type': $(elem).text()};
+            });
+            const storage_type = $(elem).find('ul').text().trim();
+
+            if(storage_type != ''){
+                return {'plan': plan_type[0].plan_type, 'storage': storage_type};
+            }
+        });
+        const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+
+            return {'bill': bill_type};
+        });
+        const myListing = [];
+        for(let i = 0; i < td_one.length; i++){
+            myListing.push({'td_one': td_one[i], 'td_two': td_two[i]});
+        }
+        console.log(myListing);
+    }
+})
+VM1478:23 (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+VM1478:23 (5) [{…}, {…}, {…}, {…}, {…}]
+VM1478:23 (4) [{…}, {…}, {…}, {…}]
+S.fn.init [prevObject: S.fn.init(4)]

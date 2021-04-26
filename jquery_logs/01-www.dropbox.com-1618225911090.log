@@ -1,0 +1,26 @@
+$('.arbor-grid-element').map((index, element) => { 
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+
+    console.log(audience, plan_name);    
+})
+VM10049:5 0 Basic
+VM10049:5 1 Plus
+VM10049:5 2 Family
+S.fn.init [prevObject: S.fn.init(3)]
+
+$('.arbor-grid-element').map((index, element) => { 
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+    const description = $(element).find('.segmented-plan-card__description').text();
+    const basic_feature = $(element).map((index, element) => console.log(element));
+
+    console.log(basic_feature);    
+})
+VM10779:5 <div class=​"arbor-grid-element segmented-plan-card__body arbor-align--flex-start arbor-grid-element--width--1-1 arbor-direction--column arbor-spacing--flex-start">​…​</div>​
+VM10779:7 S.fn.init [prevObject: S.fn.init(1)]
+VM10779:5 <div class=​"arbor-grid-element segmented-plan-card__body arbor-align--flex-start arbor-grid-element--width--1-1 arbor-direction--column arbor-spacing--flex-start">​…​</div>​
+VM10779:7 S.fn.init [prevObject: S.fn.init(1)]
+VM10779:5 <div class=​"arbor-grid-element segmented-plan-card__body arbor-align--flex-start arbor-grid-element--width--1-1 arbor-direction--column arbor-spacing--flex-start">​…​</div>​
+VM10779:7 S.fn.init [prevObject: S.fn.init(1)]
+S.fn.init [prevObject: S.fn.init(3)]

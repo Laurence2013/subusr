@@ -1,0 +1,80 @@
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+            const plan_type = $(elem).find('strong').text().trim();
+            const storage_type = $(elem).find('ul').text().trim();
+            
+            console.log({'plan': plan_type, 'storage': storage_type});
+        })
+    }
+})
+VM13137:7 {plan: "Personal Free Plan", storage: "5 GB Storage 5 GB Transfer"}
+VM13137:7 {plan: "Personal Mini Plan", storage: "200 GB Storage 200 GB Transfer"}
+VM13137:7 {plan: "Pro Solo Basic Plan", storage: "2 TB Storage Unlimited Transfer"}
+VM13137:7 {plan: "Pro Solo Standard Plan", storage: "3 TB Storage Unlimited Transfer"}
+VM13137:7 {plan: "Pro Solo Plus Plan", storage: "4 TB Storage Unlimited Transfer"}
+VM13137:7 {plan: "Pro Teams Standard Plan", storage: "1 TB Storage per user Unlimited Transfer"}
+VM13137:7 {plan: "Pro Teams Plus Plan", storage: "4 TB Storage per user Unlimited Transfer"}
+VM13137:7 {plan: "Pro Teams Advanced Plan", storage: "10 TB Storage per user Unlimited Transfer"}
+VM13137:7 {plan: "Free Plan", storage: "10 GB Storage"}
+VM13137:7 {plan: "Premium Plan", storage: "500 GB Storage"}
+VM13137:7 {plan: "Premium Plus Plan", storage: "2 TB Storage"}
+VM13137:7 {plan: "Business Plan", storage: "1 TB Storage per user"}
+VM13137:7 {plan: "Family Plan", storage: "2 TB Storage (up to 5 users)"}
+VM13137:7 {plan: "Free Plan", storage: "10 GB storage 3 GB bandwidth limit"}
+VM13137:7 {plan: "Lite Plan", storage: "150 GB storage 250 GB bandwidth limit"}
+VM13137:7 {plan: "Pro Plan", storage: "1 TB storage 2 TB bandwidth limit"}
+VM13137:7 {plan: "Pro+ Plan", storage: "5 TB storage 8 TB bandwidth limit"}
+S.fn.init [prevObject: S.fn.init(4)]
+
+
+-----
+
+$('.entry-content > div > table').map((i, element) => {
+    console.log(i);
+    const td_one = $(element).find('tr > td:nth-child(1)').map((i, elem) => {
+        const plan_type = $(elem).find('strong').text().trim();
+        const storage_type = $(elem).find('ul').text().trim();
+            
+        return {'plan': plan_type, 'storage': storage_type};
+    })
+    const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+        const bill_type = $(elem).find('a').text().trim();
+           
+        return {'bill': bill_type};
+    })
+
+    console.log(td_one[0], td_two[0]);    
+    console.log(td_one[1], td_two[1]);  
+})
+
+----
+
+
+$('.entry-content > div > table').map((i, element) => {
+    if(i != 0){
+        const td_two = $(element).find('tr > td:nth-child(2)').map((i, elem) => {
+            const bill_type = $(elem).find('a').text().trim();
+            
+            console.log({'bill': bill_type});
+        })
+    }
+})
+VM13266:6 {bill: "Forever FREE"}
+VM13266:6 {bill: "$5/month"}
+VM13266:6 {bill: "$8/month"}
+VM13266:6 {bill: "$10/month"}
+VM13266:6 {bill: "$15/month"}
+VM13266:6 {bill: "$5/month"}
+VM13266:6 {bill: "$8/month"}
+VM13266:6 {bill: "$15/month"}
+VM13266:6 {bill: "Forever FREE"}
+VM13266:6 {bill: "$4.99/month$3.99/month$175"}
+VM13266:6 {bill: "$9.99/month$7.99/month$350"}
+VM13266:6 {bill: "$9.99/month$29.97/month"}
+VM13266:6 {bill: "$500"}
+VM13266:6 {bill: "FREE"}
+VM13266:6 {bill: "$19.99 per year$59 lifetime"}
+VM13266:6 {bill: "$4.99 per month$49.99 per year$149 lifetime"}
+VM13266:6 {bill: "$17.99 per month$179.99 per year$499 lifetime"}
+S.fn.init [prevObject: S.fn.init(4)]

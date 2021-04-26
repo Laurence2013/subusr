@@ -1,0 +1,10 @@
+$('.entry-content div').map((i, elem) => $(elem).find('table tbody tr td strong').map((i, elem) => {
+    if(i === 0){
+        console.log(elem);
+    }
+}))
+VM28602:3 <strong>​1.​</strong>​
+VM28602:3 <strong>​Personal Free Plan​</strong>​
+VM28602:3 <strong>​Free Plan​</strong>​
+VM28602:3 <strong>​Free Plan​</strong>​
+S.fn.init(49) [S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), prevObject: S.fn.init(49)]

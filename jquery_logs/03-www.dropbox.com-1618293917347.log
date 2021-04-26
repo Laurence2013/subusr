@@ -1,0 +1,14 @@
+$('.arbor-grid-element').map((index, element) => { 
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+    const description = $(element).find('.segmented-plan-card__description').text();
+    const user_plan = $(element).find('.segmented-plan-card__base-feature-list').text();
+    const devices = $(element).find('.segmented-plan-card__feature-list .arbor-list').text();
+    const devices_split = devices.match(/[A-Z]+(?![a-z])|[A-Z]?[a-z]+|\d+/g).join(' ');
+    
+    console.log(devices_split);
+})
+VM3741:9 Up to 3 devices
+VM3741:9 As many devices as you need Save hard drive space with Dropbox Smart Sync 30 day account recovery with Dropbox Rewind
+VM3741:9 As many devices as you need Save hard drive space with Dropbox Smart Sync 30 day account recovery with Dropbox Rewind Family Room folder for sharing Centralized billing
+S.fn.init [prevObject: S.fn.init(3)]

@@ -1,0 +1,12 @@
+$('.arbor-grid-element').map((index, element) => { 
+    const audience = $(element).find('.segmented-plan-card__audience').text();
+    const plan_name = $(element).find('.segmented-plan-card__plan-name').text();
+    const description = $(element).find('.segmented-plan-card__description').text();
+    const user_plan = $(element).find('.segmented-plan-card__base-feature-list').text();
+
+    console.log(user_plan);    
+})
+VM1815:7 1 user2 GB of encrypted storage
+VM1815:7 1 user2 TB (2,000 GB) of encrypted storage
+VM1815:7 Up to 6 usersShare 2 TB (2,000 GB) of encrypted storage
+S.fn.init [prevObject: S.fn.init(3)]

@@ -1,0 +1,22 @@
+$('.entry-content div').eq(6).map((i, elem) => $(elem).find('table > tbody > tr > td').each((i, elem) => {
+    const title_name = $(elem).find('strong').text();
+
+    console.log(title_name);
+}))
+VM20040:4 Personal Free Plan
+VM20040:4 
+VM20040:4 Personal Mini Plan
+VM20040:4 
+VM20040:4 Pro Solo Basic Plan
+VM20040:4 
+VM20040:4 Pro Solo Standard Plan
+VM20040:4 
+VM20040:4 Pro Solo Plus Plan
+VM20040:4 
+VM20040:4 Pro Teams Standard Plan
+VM20040:4 
+VM20040:4 Pro Teams Plus Plan
+VM20040:4 
+VM20040:4 Pro Teams Advanced Plan
+VM20040:4 
+S.fn.init [S.fn.init(16), prevObject: S.fn.init(1)]

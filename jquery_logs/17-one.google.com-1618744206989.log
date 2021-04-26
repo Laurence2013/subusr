@@ -1,0 +1,11 @@
+$('.CzTxdd').map((index, element) => {
+    const storage = $(element).find('.Qnu87d').map((index, element) => console.log(element))
+})
+VM3332:2 <div class=​"Qnu87d">​15 GB​</div>​
+VM3332:2 <div class=​"Qnu87d">​100 GB​</div>​
+VM3332:2 <div class=​"Qnu87d">​200 GB​</div>​
+VM3332:2 <div class=​"Qnu87d">​2 TB​</div>​
+VM3332:2 <div class=​"Qnu87d">​10 TB​</div>​
+VM3332:2 <div class=​"Qnu87d">​20 TB​</div>​
+VM3332:2 <div class=​"Qnu87d">​30 TB​</div>​
+S.fn.init [prevObject: S.fn.init(7)]

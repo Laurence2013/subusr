@@ -1,0 +1,30 @@
+$('.entry-content div').map((i, elem) => $(elem).find('table > tbody').map((i, element) => {
+    if(i === 0){
+        $(element).find('tr > td').each((i, elem) => {  
+            const storage = {
+                'strong': $(elem).find('strong').text().trim()
+            }
+            if((storage.strong.length) != 0){
+                console.log(storage.strong);
+            }
+        })
+    }
+}))
+VM10940:8 Personal Free Plan
+VM10940:8 Personal Mini Plan
+VM10940:8 Pro Solo Basic Plan
+VM10940:8 Pro Solo Standard Plan
+VM10940:8 Pro Solo Plus Plan
+VM10940:8 Pro Teams Standard Plan
+VM10940:8 Pro Teams Plus Plan
+VM10940:8 Pro Teams Advanced Plan
+VM10940:8 Free Plan
+VM10940:8 Premium Plan
+VM10940:8 Premium Plus Plan
+VM10940:8 Business Plan
+VM10940:8 Family Plan
+VM10940:8 Free Plan
+VM10940:8 Lite Plan
+VM10940:8 Pro Plan
+VM10940:8 Pro+ Plan
+S.fn.init(37) [S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), S.fn.init(0), prevObject: S.fn.init(37)]

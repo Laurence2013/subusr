@@ -1,0 +1,47 @@
+$('.entry-content > div > table').each((i, element) => {
+    if(i != 0){
+        $(element).find('tr > td').each((i, elem) => {
+            const storage = {
+                'strong': $(elem).find('strong').text().trim(),
+                'ul': $(elem).find('ul').text().trim(),
+                'a': $(elem).find('a').text().trim()
+            }
+            console.log(storage.strong, storage.ul, storage.a);
+        })
+    }
+})
+VM7927:9 Personal Free Plan 5 GB Storage 5 GB Transfer 
+VM7927:9   Forever FREE
+VM7927:9 Personal Mini Plan 200 GB Storage 200 GB Transfer 
+VM7927:9   $5/month
+VM7927:9 Pro Solo Basic Plan 2 TB Storage Unlimited Transfer 
+VM7927:9   $8/month
+VM7927:9 Pro Solo Standard Plan 3 TB Storage Unlimited Transfer 
+VM7927:9   $10/month
+VM7927:9 Pro Solo Plus Plan 4 TB Storage Unlimited Transfer 
+VM7927:9   $15/month
+VM7927:9 Pro Teams Standard Plan 1 TB Storage per user Unlimited Transfer 
+VM7927:9   $5/month
+VM7927:9 Pro Teams Plus Plan 4 TB Storage per user Unlimited Transfer 
+VM7927:9   $8/month
+VM7927:9 Pro Teams Advanced Plan 10 TB Storage per user Unlimited Transfer 
+VM7927:9   $15/month
+VM7927:9 Free Plan 10 GB Storage 
+VM7927:9   Forever FREE
+VM7927:9 Premium Plan 500 GB Storage 
+VM7927:9  Monthly plan: $4.99/month Annual plan: $3.99/month ($47.88 billed yearly) Lifetime plan: $175 (one-time payment) $4.99/month$3.99/month$175
+VM7927:9 Premium Plus Plan 2 TB Storage 
+VM7927:9  Monthly plan: $9.99/month Annual plan: $7.99/month ($95.88 billed yearly) Lifetime plan: $350 (one-time payment) $9.99/month$7.99/month$350
+VM7927:9 Business Plan 1 TB Storage per user 
+VM7927:9  Monthly plan: $9.99/month Annual plan: $29.97/month ($287.64 billed yearly) $9.99/month$29.97/month
+VM7927:9 Family Plan 2 TB Storage (up to 5 users) 
+VM7927:9   $500
+VM7927:9 Free Plan 10 GB storage 3 GB bandwidth limit 
+VM7927:9   FREE
+VM7927:9 Lite Plan 150 GB storage 250 GB bandwidth limit 
+VM7927:9  $19.99 per year $59 lifetime (one-off payment) $19.99 per year$59 lifetime
+VM7927:9 Pro Plan 1 TB storage 2 TB bandwidth limit 
+VM7927:9  $4.99 per month $49.99 per year $149 lifetime (one-off payment) $4.99 per month$49.99 per year$149 lifetime
+VM7927:9 Pro+ Plan 5 TB storage 8 TB bandwidth limit 
+VM7927:9  $17.99 per month $179.99 per year $499 lifetime (one-off payment) $17.99 per month$179.99 per year$499 lifetime
+S.fn.init(4) [table#footable_33964.foo-table.ninja_footable.foo_table_33964.ninja_table_unique_id_1687980641_3396…, table, table, table, prevObject: S.fn.init(1)]

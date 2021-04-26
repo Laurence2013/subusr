@@ -1,0 +1,16 @@
+$('.entry-content > div > table').each((i, element) => {
+    if(i != 0){
+        const listing = $(element).find('tr > td').each((i, elem) => {
+            const strong = $(elem).find('strong').text().trim();
+            const ul = $(elem).find('ul > li').text().trim();
+            const a = $(elem).find('a').text().trim();
+
+            return {'strong': strong, 'ul': ul, 'a': a};
+        })
+        console.log(listing);
+    }
+})
+VM8499:10 S.fn.init(16) [td, td, td, td, td, td, td, td, td, td, td, td, td, td, td, td, prevObject: S.fn.init(1)]
+VM8499:10 S.fn.init(10) [td, td, td, td, td, td, td, td, td, td, prevObject: S.fn.init(1)]
+VM8499:10 S.fn.init(8) [td, td, td, td, td, td, td, td, prevObject: S.fn.init(1)]
+S.fn.init(4) [table#footable_33964.foo-table.ninja_footable.foo_table_33964.ninja_table_unique_id_1687980641_3396…, table, table, table, prevObject: S.fn.init(1)]

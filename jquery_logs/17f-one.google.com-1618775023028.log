@@ -1,0 +1,48 @@
+/*const sszzz = $('.CzTxdd').map((index, element) => {
+    const listing = [];
+    const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} })
+    const type = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} })
+    const price_type = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} })
+    const yrly_price = $(element).find('.VfPpkd-vQzf8d').text().trim()
+
+    if(yrly_price.length >= 20) {
+        const yrly_price_fix = yrly_price.substring(13, 26)
+        listing.push({'yearly_price': yrly_price_fix})
+    }
+    listing.push({'storage': storage[0].storage})
+
+    if(type.length != 0){
+        listing.push({'type': type[0].type})
+    }
+
+    try {
+        listing.push({'price': price_type[0].price})
+    }catch(error){
+        listing.push({'price': ''})
+    }
+    return {'lists': listing}
+})
+
+for(let i = 0; i < sszzz.length; i++){
+    console.log(sszzz[i].lists)
+    sszzz[i].lists.push({'test':'test'})
+}*/
+
+$('.hxvKGd').map((index, element) => {
+    $(element).map((index, element) => {
+        const includes = $(element).find('ul > li').map((index, element) => {
+            const span = $(element).find('span:nth-child(2)').text().trim();
+
+            return {'span': span}
+        })
+        console.log(includes)
+    })
+})
+VM6118:38 S.fn.init [{…}, prevObject: S.fn.init(1)]
+VM6118:38 S.fn.init(4) [{…}, {…}, {…}, {…}, prevObject: S.fn.init(4)]
+VM6118:38 S.fn.init(5) [{…}, {…}, {…}, {…}, {…}, prevObject: S.fn.init(5)]
+VM6118:38 S.fn.init(5) [{…}, {…}, {…}, {…}, {…}, prevObject: S.fn.init(5)]
+VM6118:38 S.fn.init(5) [{…}, {…}, {…}, {…}, {…}, prevObject: S.fn.init(5)]
+VM6118:38 S.fn.init(5) [{…}, {…}, {…}, {…}, {…}, prevObject: S.fn.init(5)]
+VM6118:38 S.fn.init(5) [{…}, {…}, {…}, {…}, {…}, prevObject: S.fn.init(5)]
+S.fn.init [prevObject: S.fn.init(7)]
