@@ -69,50 +69,6 @@ class GoogleDrive {
     }
     return getListing;
 
-    /*const getListing = $('.CzTxdd').map((index, element) => {
-      const listing = [];
-      const storage = $(element).find('.Qnu87d').map((index, element) => { return {'storage': $(element).text().trim()} })
-      const type = $(element).find('.tKV7vb').map((index, element) => { return {'type': $(element).find('span').text().trim()} })
-      const price_type = $(element).find('.VfPpkd-vQzf8d').map((index, element) => { return {'price': $(element).find('div > span').text().trim()} })
-      const yrly_price = $(element).find('.VfPpkd-vQzf8d').text().trim()
-
-      if(yrly_price.length >= 20) {
-        const yrly_price_fix = yrly_price.substring(13, 26)
-        listing.push({'yearly_price': yrly_price_fix})
-      }
-      listing.push({'storage': storage[0].storage})
-
-      if(type.length != 0){
-          listing.push({'type': type[0].type})
-      }
-
-      try {
-          listing.push({'monthly': price_type[0].price})
-      }catch(error){
-          listing.push({'monthly': ''})
-      }
-      return {'name': document_name, 'desc': listing}
-    }).get()
-
-    for(let i = 0; i < getListing.length; i++){
-      const detail_info = $('.hxvKGd').map((index, element) => {
-        const span = $(element).map((index, element) => {
-          return ($(element).find('ul > li').map((index, element) => {
-            const span = $(element).find('span:nth-child(2)').text().trim();
-       
-            return {'detail': span}
-          }))
-        })
-        return span[0]
-      })
-      for(let j = 0; j < detail_info[i].length; j++){
-        const detail = 'detail_' + [j].toString()
-        getListing[i].desc.push({[detail]: detail_info[i][j].detail})
-      }
-    }
-    for(let k = 0; k < getListing.length; k++){
-      console.log(getListing[k])
-    }*/
   }
   async main(){
     const browser = await puppeteer.launch({headless: true})
