@@ -9,11 +9,11 @@ const firestore = firebase.firestore();
 
 const onlineStorage = async(req, res, next) => {
   try{
-    /*const dropbox = new DropBox();
-    const body = dropbox.main();*/
+    const dropbox = new DropBox();
+    const body = dropbox.main();
 
-    const nordlocker = new NordLocker();
-    const body = nordlocker.main();
+    /*const nordlocker = new NordLocker();
+    const body = nordlocker.main();*/
 
     /*const googleDrive = new GoogleDrive();
     const body = googleDrive.main();*/

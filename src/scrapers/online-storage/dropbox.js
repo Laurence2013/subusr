@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 
+const sleep = require('../../utils/utils');
+
 class DropBox {
   async scrapeListings(page){
     const document_name = 'DropBox';
@@ -47,11 +49,8 @@ class DropBox {
     
     return listing;
   }
-  async sleep(miliseconds){
-    return new Promise(resolve => setTimeout(resolve, miliseconds));
-  }
   async main(){
-    const browser = await puppeteer.launch({headless: true});
+    const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();
 
     await page.goto('https://www.dropbox.com/plans');
@@ -62,12 +61,12 @@ class DropBox {
     const plan_price = await page.$x("//a[@class='arbor-nav-menu-button']");
 
     await plan_price[0].click();
-    await this.sleep(4000)
+    await sleep(4000);
 
     const bill_type = await page.$x("//input[@id='schedule_id--MONTHLY']");
     bill_type[0].click();
 
-    await this.sleep(4000);
+    await sleep(4000);
 
     const listing = await this.scrapeListings(page);
 
