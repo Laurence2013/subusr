@@ -12,15 +12,15 @@ const onlineStorage = async(req, res, next) => {
     /*const dropbox = new DropBox();
     const body = dropbox.main();*/
 
-    const nordlocker = new NordLocker();
-    const body = nordlocker.main();
+    /*const nordlocker = new NordLocker();
+    const body = nordlocker.main();*/
 
-    /*const googleDrive = new GoogleDrive();
-    const body = googleDrive.main();*/
+    const googleDrive = new GoogleDrive();
+    const body = googleDrive.main();
 
     body.then((results) => {
       const name = results[0].name;
-      var collections = firestore.collection('cloud-storage');
+      var collections = firestore.collection('online-storage');
 
       for(let i = 0; i < results.length; i++){
         collections.doc().set(results[i]);
